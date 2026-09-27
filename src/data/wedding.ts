@@ -259,4 +259,4 @@ export const wedding = {
   ] satisfies FAQItem[],
 } as const;
 
-export const weddingDateRange = `${wedding.dates[0]}–${wedding.dates[2]} ${wedding.month} ${wedding.year}`;
+export const weddingDateRange = `${wedding.dates[0]}–${wedding.dates[1]} ${wedding.month} ${wedding.year}`;
