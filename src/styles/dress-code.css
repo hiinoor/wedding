@@ -38,17 +38,37 @@
 }
 @media (max-width: 767px) {
   .dress-code__intro-layout { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
-  .dress-code__intro-copy { padding-block: 4rem 2.5rem; }
-  .dress-code__intro h2 { font-size: clamp(4.1rem, 13vw, 6rem); }
+  .dress-code__intro-copy { padding-block: 3rem 1.6rem; }
+  .dress-code__intro h2 { font-size: clamp(3.5rem, 11.5vw, 5.2rem); }
+  .dress-code__intro p:not(.eyebrow) { margin: 1rem 0 1.25rem; font-size: 0.85rem; line-height: 1.65; }
   .dress-code__intro-visual { width: 100%; }
-  .dress-code__intro-photo { width: 100%; min-height: 20rem; height: 100vw; max-height: 31rem; }
+  .dress-code__intro-photo { width: 100%; min-height: 14.5rem; height: 65vw; max-height: 21rem; }
   .dress-code__intro-photo::after { background: linear-gradient(180deg, rgb(233 223 210 / 0.25), transparent 26%); }
-  .dress-look { padding-block: 3rem 3.8rem; }
-  .dress-look__layout { display: flex; flex-direction: column; align-items: stretch; gap: 2.4rem; }
-  .dress-look__photo { height: clamp(20rem, 112vw, 32rem); }
-  .dress-look__copy { max-width: 28rem; }
-  .dress-look h3 { font-size: clamp(4rem, 13vw, 6rem); }
-  .dress-look__description { margin-top: 1.1rem; font-size: 0.87rem; }
-  .dress-look__rule { margin-top: 1.5rem; }
+  .dress-look { padding-block: 2.1rem 2.5rem; }
+  .dress-look__layout { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+  .dress-look__visual { width: min(78%, 20rem); align-self: flex-start; }
+  .dress-look:nth-child(even) .dress-look__visual { align-self: flex-end; }
+  .dress-look__photo { height: auto; aspect-ratio: 4 / 5; }
+  .dress-look__copy {
+    position: relative;
+    z-index: 1;
+    width: 89%;
+    max-width: none;
+    align-self: flex-end;
+    margin-top: -3.5rem;
+    padding: 1.15rem 1.3rem 1.35rem;
+    border: 1px solid rgb(178 138 82 / 0.28);
+    background: var(--paper);
+    box-shadow: 0 16px 36px rgb(47 37 29 / 0.08);
+  }
+  .dress-look:nth-child(even) .dress-look__copy { align-self: flex-start; background: var(--stone); }
+  .dress-look--sangeet .dress-look__copy { border-color: rgb(216 189 147 / 0.45); background: var(--olive); }
+  .dress-look__index { gap: 0.5rem; margin-bottom: 0.65rem; }
+  .dress-look__index span:first-child { font-size: 1.9rem; }
+  .dress-look__index span:last-child { font-size: 0.68rem; letter-spacing: 0.1em; }
+  .dress-look__index span:last-child::before { width: 1rem; margin-right: 0.45rem; }
+  .dress-look h3 { font-size: clamp(3rem, 11vw, 4.2rem); line-height: 0.87; }
+  .dress-look__description { margin-top: 0.9rem; font-size: 0.84rem; line-height: 1.62; }
+  .dress-look__rule { width: 5.5rem; margin-top: 1rem; }
 }
 @media (prefers-reduced-motion: reduce) { .dress-look__photo img { transition: none; } }

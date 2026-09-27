@@ -29,11 +29,17 @@
 
 @media (max-width: 767px) {
   .faq__layout { display: block; }
-  .faq__heading { margin-bottom: 3.5rem; }
+  .faq__heading { margin-bottom: 2rem; }
   .faq__heading h2 { font-size: clamp(4.4rem, 13vw, 6rem); }
   .faq__item button { font-size: clamp(1.85rem, 6vw, 2.3rem); }
+  .site-footer { padding-block: 3rem 1.5rem; }
+  .site-footer__inner > a { width: 5.5rem; min-height: 5.5rem; }
+  .site-footer__mark { width: 4.5rem; }
   .site-footer__names { font-size: clamp(3.2rem, 10vw, 5rem); }
-  .site-footer nav { gap: 0.5rem 1.5rem; }
+  .site-footer__names { margin-top: 1.2rem; }
+  .site-footer__dates { margin-top: 1rem; }
+  .site-footer__thanks { margin-top: 1.4rem; }
+  .site-footer nav { gap: 0.5rem 1.5rem; margin-top: 2.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

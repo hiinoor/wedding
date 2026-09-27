@@ -346,7 +346,8 @@
 
 @media (max-width: 640px) {
   .section {
-    padding: 68px 0 52px;
+    min-height: 0;
+    padding: 50px 0 35px;
   }
 
   .section::before {
@@ -373,15 +374,15 @@
 
   .title {
     font-size: clamp(45px, 12vw, 61px);
-    margin-bottom: 27px;
+    margin-bottom: 18px;
   }
 
   .carousel {
-    height: min(109vw, 435px);
+    height: min(90vw, 370px);
   }
 
   .slide {
-    width: min(76vw, 325px);
+    width: min(68vw, 285px);
   }
 
   .frame {
@@ -403,19 +404,23 @@
   .right { right: 10px; }
 
   .meta {
-    margin-top: 22px;
-    min-height: 92px;
+    margin-top: 12px;
+    min-height: 0;
   }
 
   .meta::before {
-    margin-bottom: 14px;
+    margin-bottom: 9px;
   }
 
   .name {
-    font-size: clamp(48px, 13vw, 62px);
+    font-size: clamp(45px, 11vw, 56px);
   }
 
-  .controls { margin-top: 15px; }
+  .role { margin-top: 8px; }
+  .controls { margin-top: 10px; }
+  .dots { margin-top: 4px; }
+  .dot { width: 40px; height: 36px; }
+  .counter { margin-top: 0; font-size: 15px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

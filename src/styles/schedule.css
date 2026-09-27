@@ -173,22 +173,22 @@
 }
 
 @media (max-width: 767px) {
-  .schedule__opening { display: block; margin-bottom: 3rem; }
-  .schedule__opening-visual { margin-top: 2rem; }
-  .schedule__opening-photo { height: clamp(13rem, 55vw, 22rem); }
-  .schedule__heading h2 { font-size: clamp(3.8rem, 12.5vw, 6rem); }
-  .schedule__day { display: block; padding-block: 3rem 3.7rem; }
-  .schedule__day-heading { margin-bottom: 2.8rem; }
+  .schedule__opening { display: block; margin-bottom: 2rem; }
+  .schedule__opening-visual { margin-top: 1.3rem; }
+  .schedule__opening-photo { height: clamp(11rem, 45vw, 18rem); }
+  .schedule__heading h2 { font-size: clamp(3.6rem, 11.5vw, 5.5rem); }
+  .schedule__day { display: block; padding-block: 2.2rem 2.6rem; }
+  .schedule__day-heading { margin-bottom: 1.8rem; }
   .schedule__day-heading h3 { margin-top: 0.7rem; }
-  .schedule__day-heading h3 span { font-size: clamp(8rem, 35vw, 12rem); }
-  .schedule__day-heading h3 small { margin-top: 1.4rem; font-size: 0.65rem; }
+  .schedule__day-heading h3 span { font-size: clamp(6.5rem, 30vw, 9rem); }
+  .schedule__day-heading h3 small { margin-top: 1rem; font-size: 0.65rem; }
   .schedule__event-grid { grid-template-columns: 2.5rem minmax(0, 1fr); }
   .schedule__time { grid-column: 2; grid-row: 1; margin: 0 0 0.65rem; font-size: 0.7rem; }
   .schedule__marker { grid-column: 1; grid-row: 1 / span 2; justify-self: start; width: 1.28rem; height: 2.5rem; margin-top: -0.25rem; }
   .schedule__event-content { grid-column: 2; grid-row: 2; }
   .schedule__event-content h4 { font-size: clamp(2.6rem, 10vw, 3.6rem); }
   .schedule__description { margin-top: 0.65rem; font-size: 0.82rem; }
-  .schedule__event + .schedule__event { margin-top: 3.1rem; }
+  .schedule__event + .schedule__event { margin-top: 2.3rem; }
   .schedule__rail, .schedule__rail-progress { left: 0.62rem; top: 0; bottom: 0; }
 }
 
