@@ -1,0 +1,198 @@
+.schedule {
+  background: var(--ivory);
+}
+
+.schedule__opening {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 0.72fr);
+  align-items: end;
+  gap: clamp(2rem, 7vw, 8rem);
+  margin-bottom: clamp(3.5rem, 6vw, 6rem);
+}
+
+.schedule__heading {
+  max-width: 55rem;
+}
+
+.schedule__opening-photo {
+  position: relative;
+  height: clamp(16rem, 28vw, 25rem);
+  overflow: hidden;
+  margin: 0;
+  background: var(--sand);
+}
+
+.schedule__opening-photo img { object-fit: cover; }
+.schedule__opening-photo::after { position: absolute; inset: 0.8rem; border: 1px solid rgb(247 241 232 / 0.64); content: ""; pointer-events: none; }
+
+.schedule__heading h2 {
+  margin: 1rem 0 0;
+  color: var(--wine);
+  font-family: var(--font-editorial);
+  font-size: clamp(4rem, 8.3vw, 8.5rem);
+  font-weight: 400;
+  line-height: 0.86;
+  letter-spacing: -0.052em;
+}
+
+.schedule__day {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.37fr) minmax(0, 0.95fr);
+  gap: clamp(2rem, 7vw, 8rem);
+  padding-block: clamp(3rem, 5vw, 5rem);
+  border-top: 1px solid color-mix(in srgb, var(--gold) 42%, transparent);
+}
+
+.schedule__day:last-child {
+  padding-bottom: 0;
+}
+
+.schedule__day-heading h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 1.2rem 0 0;
+}
+
+.schedule__day-heading h3 span {
+  color: var(--wine);
+  font-family: var(--font-editorial);
+  font-size: clamp(9rem, 16vw, 16rem);
+  font-weight: 400;
+  line-height: 0.7;
+  letter-spacing: -0.1em;
+}
+
+.schedule__day-heading h3 small {
+  margin-top: 2.2rem;
+  color: var(--wine);
+  font-family: var(--font-functional);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+
+.schedule__timeline {
+  position: relative;
+}
+
+.schedule__rail,
+.schedule__rail-progress {
+  position: absolute;
+  z-index: 0;
+  top: 0.55rem;
+  bottom: 0.55rem;
+  left: calc(clamp(8rem, 14vw, 12rem) + 2.5rem);
+  width: 1px;
+  background: color-mix(in srgb, var(--gold) 32%, transparent);
+  pointer-events: none;
+}
+
+.schedule__rail-progress {
+  z-index: 1;
+  background: var(--gold);
+  transform-origin: top;
+}
+
+.schedule__events {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.schedule__event + .schedule__event {
+  margin-top: clamp(2.8rem, 4vw, 4.8rem);
+}
+
+.schedule__event-grid {
+  display: grid;
+  grid-template-columns: clamp(8rem, 14vw, 12rem) 5rem minmax(0, 1fr);
+  align-items: start;
+}
+
+.schedule__time {
+  margin: 0.42rem 0 0;
+  color: var(--wine);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.schedule__marker {
+  position: relative;
+  z-index: 3;
+  display: block;
+  width: 1.6rem;
+  height: 2.9rem;
+  justify-self: center;
+  margin-top: -0.15rem;
+  background: var(--gold);
+  -webkit-mask: url("/assets/kp-flower.png") center / contain no-repeat;
+  mask: url("/assets/kp-flower.png") center / contain no-repeat;
+}
+
+.schedule__event-content h4 {
+  max-width: 37rem;
+  margin: 0;
+  color: var(--wine);
+  font-family: var(--font-editorial);
+  font-size: clamp(2.35rem, 3.4vw, 4.3rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+.schedule__description {
+  max-width: 32rem;
+  margin: 1rem 0 0;
+  color: var(--espresso);
+  font-size: 0.86rem;
+  line-height: 1.85;
+}
+
+.schedule__mood {
+  margin: 1.1rem 0 0;
+  color: var(--wine);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1000px) {
+  .schedule__day { grid-template-columns: minmax(9rem, 0.3fr) minmax(0, 1fr); gap: 2rem; }
+  .schedule__day-heading h3 span { font-size: clamp(8rem, 17vw, 11rem); }
+  .schedule__event-grid { grid-template-columns: 9.4rem 3.5rem minmax(0, 1fr); }
+  .schedule__rail, .schedule__rail-progress { left: calc(9.4rem + 1.75rem); }
+}
+
+@media (max-width: 767px) {
+  .schedule__opening { display: block; margin-bottom: 3rem; }
+  .schedule__opening-visual { margin-top: 2rem; }
+  .schedule__opening-photo { height: clamp(13rem, 55vw, 22rem); }
+  .schedule__heading h2 { font-size: clamp(3.8rem, 12.5vw, 6rem); }
+  .schedule__day { display: block; padding-block: 3rem 3.7rem; }
+  .schedule__day-heading { margin-bottom: 2.8rem; }
+  .schedule__day-heading h3 { margin-top: 0.7rem; }
+  .schedule__day-heading h3 span { font-size: clamp(8rem, 35vw, 12rem); }
+  .schedule__day-heading h3 small { margin-top: 1.4rem; font-size: 0.65rem; }
+  .schedule__event-grid { grid-template-columns: 2.5rem minmax(0, 1fr); }
+  .schedule__time { grid-column: 2; grid-row: 1; margin: 0 0 0.65rem; font-size: 0.7rem; }
+  .schedule__marker { grid-column: 1; grid-row: 1 / span 2; justify-self: start; width: 1.28rem; height: 2.5rem; margin-top: -0.25rem; }
+  .schedule__event-content { grid-column: 2; grid-row: 2; }
+  .schedule__event-content h4 { font-size: clamp(2.6rem, 10vw, 3.6rem); }
+  .schedule__description { margin-top: 0.65rem; font-size: 0.82rem; }
+  .schedule__event + .schedule__event { margin-top: 3.1rem; }
+  .schedule__rail, .schedule__rail-progress { left: 0.62rem; top: 0; bottom: 0; }
+}
+
+@media (max-width: 360px) {
+  .schedule__heading h2 { font-size: 3.5rem; }
+  .schedule__event-content h4 { font-size: 2.35rem; }
+}

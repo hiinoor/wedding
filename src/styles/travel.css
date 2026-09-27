@@ -1,0 +1,87 @@
+.travel { background: var(--ivory); }
+
+.travel__venue { padding-block: clamp(2.5rem, 5vw, 5rem); border-top: 1px solid color-mix(in srgb, var(--gold) 42%, transparent); }
+
+#your-stay { scroll-margin-top: 5rem; }
+.travel__location-stay { position: relative; z-index: 1; display: grid; grid-column: 1 / -1; grid-template-columns: minmax(12rem, 0.33fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 6rem); padding-top: clamp(1.8rem, 3vw, 2.8rem); border-top: 1px solid color-mix(in srgb, var(--gold) 55%, transparent); }
+.travel__stay-heading p:last-child { margin: 0.4rem 0 0; color: var(--gold-ink); font-family: var(--font-editorial); font-size: 1.4rem; line-height: 1; }
+.travel__stay-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 3vw, 3rem); }
+.travel__stay-date { display: flex; align-items: center; gap: clamp(0.8rem, 1.5vw, 1.5rem); min-width: 0; }
+.travel__stay-date + .travel__stay-date { padding-left: clamp(1rem, 3vw, 3rem); border-left: 1px solid color-mix(in srgb, var(--gold) 55%, transparent); }
+.travel__stay-number { color: var(--wine); font-family: var(--font-editorial); font-size: clamp(4.5rem, 7vw, 7rem); font-weight: 400; line-height: 0.78; letter-spacing: -0.09em; }
+.travel__stay-date div { display: flex; flex-direction: column; gap: 0.3rem; }
+.travel__stay-date strong { color: var(--espresso); font-family: var(--font-editorial); font-size: clamp(1.6rem, 2.5vw, 2.35rem); font-weight: 400; white-space: nowrap; }
+.travel__stay-date div span { color: var(--wine); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.17em; text-transform: uppercase; }
+.travel__stay-note { max-width: 42rem; margin: 1.4rem 0 0; color: var(--espresso); font-size: 0.8rem; line-height: 1.7; }
+
+.travel__guide { background: var(--ivory); }
+.travel__guide-heading { margin-bottom: clamp(1.5rem, 3vw, 3rem); }
+
+.travel__routes { margin-top: 0; }
+.travel__route { display: grid; grid-template-columns: minmax(7rem, 0.28fr) minmax(0, 1fr) auto; gap: clamp(1.5rem, 3vw, 4rem); align-items: start; padding-block: clamp(2.8rem, 5vw, 5rem); border-top: 1px solid color-mix(in srgb, var(--gold) 48%, transparent); }
+.travel__routes > div:last-child .travel__route { border-bottom: 1px solid color-mix(in srgb, var(--gold) 48%, transparent); }
+.travel__route-label .eyebrow { padding-top: 0.55rem; }
+.travel__route h3 { max-width: 43rem; margin: 0; color: var(--wine); font-family: var(--font-editorial); font-size: clamp(2.65rem, 4vw, 4.5rem); font-weight: 400; line-height: 0.97; letter-spacing: -0.035em; }
+.travel__route h3 span { display: inline; }
+.travel__route-metrics { display: flex; flex-wrap: wrap; gap: 1.8rem clamp(2rem, 4vw, 5rem); margin-top: 2rem; }
+.travel__route-metrics p { display: flex; flex-direction: column; gap: 0.35rem; margin: 0; }
+.travel__route-metrics strong { color: var(--espresso); font-size: 0.82rem; font-weight: 600; line-height: 1.5; }
+.travel__route-metrics span { color: color-mix(in srgb, var(--espresso) 65%, transparent); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.travel__route--secondary { padding-block: clamp(2.5rem, 4vw, 3.7rem); }
+.travel__route--secondary h3 { font-size: clamp(2.4rem, 3.2vw, 3.6rem); }
+
+.travel__action { display: inline-flex; min-height: 44px; align-items: center; gap: 0.65rem; border-bottom: 1px solid var(--gold); color: var(--wine); font-size: 0.63rem; font-weight: 700; line-height: 1.5; letter-spacing: 0.14em; text-decoration: none; text-transform: uppercase; white-space: nowrap; transition: color 250ms ease, border-color 250ms ease; }
+.travel__action:hover { border-color: var(--wine); color: var(--espresso); }
+.travel__action span { font-size: 0.95rem; font-weight: 400; transition: transform 300ms ease; }
+.travel__action:hover span { transform: translate(3px, -3px); }
+.travel__route > .travel__action { align-self: center; }
+
+.travel__location { position: relative; display: grid; grid-template-columns: minmax(12rem, 0.33fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 6rem); align-items: center; overflow: hidden; padding: clamp(2.5rem, 5vw, 5rem); background: var(--sand); }
+.travel__location::after { position: absolute; inset: 0.9rem; border: 1px solid color-mix(in srgb, var(--gold) 48%, transparent); content: ""; pointer-events: none; }
+.travel__location-mark { display: block; width: clamp(7rem, 15vw, 15rem); height: clamp(7rem, 15vw, 15rem); justify-self: center; background: color-mix(in srgb, var(--gold) 74%, transparent); -webkit-mask: url("/assets/kp-monogram.png") center / contain no-repeat; mask: url("/assets/kp-monogram.png") center / contain no-repeat; }
+.travel__location-content { position: relative; z-index: 1; }
+.travel__location h2 { margin: 1rem 0 0; color: var(--wine); font-family: var(--font-editorial); font-size: clamp(3.5rem, 6.2vw, 6.8rem); font-weight: 400; line-height: 0.88; letter-spacing: -0.045em; }
+.travel__location-area { margin: 1.3rem 0 0; color: var(--wine); font-size: 0.69rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+.travel__location address { max-width: 35rem; margin-top: 1.5rem; color: var(--espresso); font-size: 0.86rem; font-style: normal; line-height: 1.8; }
+.travel__location-actions { display: flex; flex-wrap: wrap; gap: 0.7rem 2.5rem; margin-top: 2rem; }
+.travel__journey-note { display: grid; grid-template-columns: minmax(12rem, 0.33fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 6rem); margin-top: clamp(3.5rem, 6vw, 6rem); }
+.travel__journey-note p:last-child { max-width: 39rem; margin: 0; font-size: 0.83rem; line-height: 1.85; }
+
+@media (max-width: 900px) {
+  .travel__route { grid-template-columns: minmax(6.5rem, 0.24fr) minmax(0, 1fr); }
+  .travel__route > .travel__action { grid-column: 2; justify-self: start; }
+  .travel__stay-date { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+}
+
+@media (max-width: 767px) {
+  .travel__route { display: block; padding-block: 2.25rem; }
+  .travel__route-label .eyebrow { padding: 0; }
+  .travel__route h3 { margin-top: 1.4rem; font-size: clamp(2.9rem, 10vw, 4rem); }
+  .travel__route--secondary h3 { font-size: clamp(2.7rem, 9vw, 3.5rem); }
+  .travel__route-metrics { margin-top: 1.6rem; }
+  .travel__route > .travel__action { margin-top: 1.5rem; }
+  .travel__location { display: block; padding: 2.6rem 2rem; }
+  .travel__location-mark { width: 5rem; height: 5rem; margin: 0 0 2.5rem; }
+  .travel__location h2 { font-size: clamp(3.5rem, 12vw, 5rem); }
+  .travel__location-stay { display: block; margin-top: 2.5rem; padding-top: 1.5rem; }
+  .travel__stay-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+  .travel__stay-heading p:last-child { margin: 0; font-size: 1.2rem; white-space: nowrap; }
+  .travel__stay-grid { gap: 1rem; margin-top: 1.4rem; }
+  .travel__stay-number { font-size: clamp(4.2rem, 15vw, 6rem); }
+  .travel__stay-date strong { font-size: clamp(1.4rem, 5vw, 1.8rem); }
+  .travel__stay-date + .travel__stay-date { padding-left: 1rem; }
+  .travel__stay-note { margin-top: 1.3rem; font-size: 0.75rem; }
+  .travel__journey-note { display: block; }
+  .travel__journey-note p:last-child { margin-top: 0.8rem; }
+}
+
+@media (max-width: 360px) {
+  .travel__location { padding-inline: 1.6rem; }
+  .travel__stay-heading { display: block; }
+  .travel__stay-heading p:last-child { margin-top: 0.25rem; }
+  .travel__stay-date strong { font-size: 1.35rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .travel__action, .travel__action span { transition: none; }
+}

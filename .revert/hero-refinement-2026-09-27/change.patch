@@ -1,0 +1,83 @@
+--- a/src/styles/hero.css
++++ b/src/styles/hero.css
+@@ -1,4 +1,6 @@
+ .hero {
++  --hero-ivory: #F6EEE3;
++  --hero-soft-ivory: rgba(246, 238, 227, 0.92);
+   position: relative;
+   min-height: 100svh;
+   overflow: hidden;
+@@ -11,8 +13,8 @@
+   z-index: 1;
+   inset: 0;
+   background:
+-    radial-gradient(ellipse 36rem 16rem at 50% 44%, rgb(32 29 27 / 0.2), transparent 80%),
+-    linear-gradient(180deg, rgb(32 29 27 / 0.2), rgb(32 29 27 / 0.08) 52%, rgb(32 29 27 / 0.28));
++    radial-gradient(ellipse 40rem 21rem at 50% 56%, rgb(24 23 23 / 0.3), rgb(24 23 23 / 0.13) 58%, transparent 88%),
++    linear-gradient(180deg, rgb(24 23 23 / 0.16), rgb(24 23 23 / 0.06) 46%, rgb(24 23 23 / 0.09) 70%, rgb(24 23 23 / 0.2));
+   content: "";
+   pointer-events: none;
+ }
+@@ -40,9 +42,9 @@
+ .hero__content {
+   width: min(100%, 76rem);
+   margin-top: -8svh;
+-  color: var(--ivory);
++  color: var(--hero-soft-ivory);
+   text-align: center;
+-  text-shadow: 0 2px 8px rgb(23 21 20 / 0.6);
++  text-shadow: 0 1px 6px rgb(23 21 20 / 0.28);
+ }
+ 
+ .hero__pretitle {
+@@ -61,16 +63,18 @@
+   justify-content: center;
+   gap: 0 0.16em;
+   margin: 0;
++  color: var(--hero-ivory);
+   font-family: var(--font-editorial);
+   font-size: clamp(5.2rem, 8vw, 9.2rem);
+   font-weight: 500;
+   line-height: 0.9;
+   letter-spacing: -0.052em;
++  text-shadow: 0 2px 12px rgb(18 19 20 / 0.3);
+   animation: hero-rise 850ms 200ms both;
+ }
+ 
+ .hero__title > span { white-space: nowrap; }
+-.hero__ampersand { color: var(--ivory); font-size: 0.72em; font-style: italic; font-weight: 400; letter-spacing: -0.07em; }
++.hero__ampersand { color: #B28A52; font-size: 0.72em; font-style: italic; font-weight: 400; letter-spacing: -0.07em; text-shadow: 0 1px 5px rgb(18 19 20 / 0.4); }
+ 
+ .hero__details {
+   display: flex;
+@@ -112,7 +116,9 @@
+ @media (max-width: 767px) {
+   .hero { background-image: url('/videos/landing-poster-mobile.jpg'); }
+   .hero::before {
+-    background: linear-gradient(180deg, rgb(32 29 27 / 0.3), rgb(32 29 27 / 0.13) 45%, rgb(32 29 27 / 0.1) 67%, rgb(32 29 27 / 0.3));
++    background:
++      radial-gradient(ellipse 88% 31% at 50% 34%, rgb(24 23 23 / 0.3), rgb(24 23 23 / 0.12) 65%, transparent 100%),
++      linear-gradient(180deg, rgb(24 23 23 / 0.2), rgb(24 23 23 / 0.06) 50%, rgb(24 23 23 / 0.2));
+   }
+   .hero__video { object-position: center; }
+   .hero__inner { align-items: flex-start; padding-block: clamp(8rem, 16svh, 10rem) 5rem; }
+--- a/src/styles/header.css
++++ b/src/styles/header.css
+@@ -2,7 +2,7 @@
+   position: fixed;
+   z-index: 50;
+   inset: 0 0 auto;
+-  color: var(--ivory);
++  color: rgba(246, 238, 227, 0.92);
+   background: transparent;
+   border-bottom: 1px solid transparent;
+   transition: color 350ms ease, background-color 350ms ease, border-color 350ms ease;
+@@ -39,7 +39,7 @@
+   width: 52px;
+   height: 52px;
+   place-items: center;
+-  color: var(--ivory);
++  color: rgba(246, 238, 227, 0.92);
+   animation: header-drop 750ms 80ms cubic-bezier(0.22, 1, 0.36, 1) both;
+ }
+ 

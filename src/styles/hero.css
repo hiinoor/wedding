@@ -1,0 +1,144 @@
+.hero {
+  --hero-ivory: #F6EEE3;
+  --hero-soft-ivory: rgba(246, 238, 227, 0.92);
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background: var(--ivory) url('/videos/landing-poster-desktop.jpg') center / cover no-repeat;
+  isolation: isolate;
+}
+
+.hero::before {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 40rem 21rem at 50% 56%, rgb(24 23 23 / 0.3), rgb(24 23 23 / 0.13) 58%, transparent 88%),
+    linear-gradient(180deg, rgb(24 23 23 / 0.16), rgb(24 23 23 / 0.06) 46%, rgb(24 23 23 / 0.09) 70%, rgb(24 23 23 / 0.2));
+  content: "";
+  pointer-events: none;
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: 100svh;
+  align-items: center;
+  justify-content: center;
+  padding-block: 7rem 5rem;
+}
+
+.hero__content {
+  width: min(100%, 76rem);
+  margin-top: -8svh;
+  color: var(--hero-soft-ivory);
+  text-align: center;
+  text-shadow: 0 1px 6px rgb(23 21 20 / 0.28);
+}
+
+.hero__pretitle {
+  margin: 0 0 1.3rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  animation: hero-rise 700ms 100ms both;
+}
+
+.hero__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0 0.16em;
+  margin: 0;
+  color: var(--hero-ivory);
+  font-family: var(--font-editorial);
+  font-size: clamp(5.2rem, 8vw, 9.2rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.052em;
+  text-shadow: 0 2px 12px rgb(18 19 20 / 0.3);
+  animation: hero-rise 850ms 200ms both;
+}
+
+.hero__title > span { white-space: nowrap; }
+.hero__ampersand { color: #B28A52; font-size: 0.72em; font-style: italic; font-weight: 400; letter-spacing: -0.07em; text-shadow: 0 1px 5px rgb(18 19 20 / 0.4); }
+
+.hero__details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem 1.1rem;
+  margin: clamp(1.4rem, 3vh, 2rem) 0 0;
+  font-family: var(--font-editorial);
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  animation: hero-rise 700ms 300ms both;
+}
+
+.hero__details-divider { color: var(--gold-light); }
+.hero__tagline { margin: 1.8rem 0 0; font-family: var(--font-editorial); font-size: clamp(1.25rem, 1.8vw, 1.65rem); font-style: italic; line-height: 1.2; animation: hero-rise 700ms 400ms both; }
+
+.hero__scroll {
+  position: absolute;
+  z-index: 2;
+  bottom: clamp(1.5rem, 3vh, 2.8rem);
+  left: 50%;
+  display: grid;
+  width: 48px;
+  min-height: 44px;
+  place-items: center;
+  color: var(--ivory);
+  text-decoration: none;
+  transform: translateX(-50%);
+}
+
+.hero__scroll svg { width: 25px; height: 25px; filter: drop-shadow(0 1px 5px rgb(45 36 32 / 0.85)); animation: hero-chevron 1.9s ease-in-out infinite; }
+
+@keyframes hero-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes hero-chevron { 0%, 100% { transform: translateY(-3px); } 50% { transform: translateY(5px); } }
+
+@media (max-width: 767px) {
+  .hero { background-image: url('/videos/landing-poster-mobile.jpg'); }
+  .hero::before {
+    background:
+      radial-gradient(ellipse 88% 31% at 50% 34%, rgb(24 23 23 / 0.3), rgb(24 23 23 / 0.12) 65%, transparent 100%),
+      linear-gradient(180deg, rgb(24 23 23 / 0.2), rgb(24 23 23 / 0.06) 50%, rgb(24 23 23 / 0.2));
+  }
+  .hero__video { object-position: center; }
+  .hero__inner { align-items: flex-start; padding-block: clamp(8rem, 16svh, 10rem) 5rem; }
+  .hero__content { max-width: 29rem; margin-inline: auto; }
+  .hero__pretitle { margin-bottom: 1rem; font-size: 0.55rem; letter-spacing: 0.19em; }
+  .hero__title { flex-direction: column; align-items: center; gap: 0; font-size: clamp(3.7rem, 15vw, 6rem); line-height: 0.77; }
+  .hero__ampersand { margin-block: 0.08em; font-size: 0.6em; }
+  .hero__details { flex-direction: column; gap: 0.15rem; margin-top: 1.6rem; font-size: 1.35rem; }
+  .hero__details-divider { display: none; }
+  .hero__tagline { max-width: 18rem; margin: 1.2rem auto 0; font-size: 1.2rem; }
+  .hero__scroll { bottom: 1.1rem; }
+}
+
+@media (max-width: 380px) {
+  .hero__title { font-size: 3.5rem; }
+  .hero__pretitle { font-size: 0.48rem; }
+  .hero__tagline { font-size: 1.05rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__pretitle, .hero__title, .hero__details, .hero__tagline { animation: none; }
+  .hero__scroll svg { animation: none; }
+}
