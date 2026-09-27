@@ -94,7 +94,7 @@
 }
 
 .title {
-  margin: 0;
+  margin: 0 0 clamp(28px, 3.8vh, 42px);
   color: #f6eee3;
   font: 400 clamp(56px, 6.1vw, 92px)/.92 var(--font-editorial);
   letter-spacing: -.035em;
@@ -104,13 +104,6 @@
 .title em {
   color: #e0bf85;
   font-weight: 400;
-}
-
-.intro {
-  margin: 15px 0 clamp(26px, 3.8vh, 42px);
-  color: rgb(246 238 227 / 0.78);
-  font: italic 400 clamp(17px, 1.8vw, 23px)/1.25 var(--font-editorial);
-  letter-spacing: .025em;
 }
 
 .carousel {
@@ -380,9 +373,8 @@
 
   .title {
     font-size: clamp(45px, 12vw, 61px);
+    margin-bottom: 27px;
   }
-
-  .intro { max-width: 16rem; margin: 10px auto 27px; font-size: 18px; }
 
   .carousel {
     height: min(109vw, 435px);

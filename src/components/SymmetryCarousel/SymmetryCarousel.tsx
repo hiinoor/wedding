@@ -128,7 +128,6 @@ export default function SymmetryCarousel({ slides, initialIndex = 0 }: Props) {
       <div className={styles.headingWrap}>
         <p className={styles.kicker}>A GLIMPSE OF US</p>
         <h2 className={styles.title}>The <em>Portraits</em></h2>
-        <p className={styles.intro}>A few moments from our story, before forever.</p>
       </div>
 
       <div
