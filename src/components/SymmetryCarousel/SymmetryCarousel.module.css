@@ -347,20 +347,10 @@
 @media (max-width: 640px) {
   .section {
     min-height: 0;
-    padding: 50px 0 35px;
+    padding: 46px 0 32px;
   }
 
-  .section::before {
-    top: 24%;
-    width: 110vw;
-    height: 115vw;
-  }
-
-  .innerArch {
-    top: calc(24% + 12px);
-    width: calc(110vw - 24px);
-    height: calc(115vw - 24px);
-  }
+  .section::before, .innerArch { display: none; }
 
   .flower { top: 20%; width: 72px; height: 114px; opacity: .13; }
   .flowerLeft { left: -22px; }
@@ -378,11 +368,17 @@
   }
 
   .carousel {
-    height: min(90vw, 370px);
+    height: min(86vw, 350px);
   }
 
   .slide {
-    width: min(68vw, 285px);
+    width: min(66vw, 280px);
+    transition: opacity 280ms ease;
+  }
+
+  .slide[aria-hidden="true"] {
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
 
   .frame {
@@ -400,8 +396,8 @@
     height: 21px;
   }
 
-  .left { left: 10px; }
-  .right { right: 10px; }
+  .left { left: 5px; }
+  .right { right: 5px; }
 
   .meta {
     margin-top: 12px;
@@ -427,7 +423,8 @@
   .flower { animation: none; }
   .arrow,
   .dot,
-  .photo {
+  .photo,
+  .slide {
     transition: none !important;
   }
 }
