@@ -5,7 +5,7 @@
   place-items: center;
   overflow: hidden;
   isolation: isolate;
-  background: #e9d7ba url("/images/hex-gallery/sculpted-sand.webp") center / cover no-repeat;
+  background: #eee6db;
 }
 
 .section::after {
