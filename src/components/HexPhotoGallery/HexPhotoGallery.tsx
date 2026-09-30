@@ -21,9 +21,9 @@ const rows = [
   ],
 ] as const;
 
-const spotlightGroups = [[0, 1], [2], [4], [5, 6], [3]] as const;
-const spotlightDurations = [1900, 1550, 1550, 1900, 2300] as const;
-const entranceOrder = [0, 0, 1, 4, 2, 3, 3] as const;
+const spotlightGroups = [[0, 1], [2, 4], [5, 6], [3]] as const;
+const spotlightDurations = [1200, 1200, 1200, 1600] as const;
+const entranceOrder = [0, 0, 1, 3, 1, 2, 2] as const;
 
 export function HexPhotoGallery() {
   const reducedMotion = useReducedMotion();
