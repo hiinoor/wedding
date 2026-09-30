@@ -5,16 +5,14 @@
   place-items: center;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(ellipse 38rem 30rem at 50% 50%, rgb(178 138 82 / 0.14), transparent 78%),
-    linear-gradient(135deg, #30372e, #252c27 58%, #343a2f);
+  background: #e9d7ba url("/images/hex-gallery/sculpted-sand.webp") center / cover no-repeat;
 }
 
 .section::after {
   position: absolute;
   z-index: -1;
   inset: clamp(14px, 2vw, 24px);
-  border: 1px solid rgb(216 189 147 / 0.2);
+  border: 1px solid rgb(102 68 38 / 0.28);
   content: "";
   pointer-events: none;
 }
@@ -36,7 +34,7 @@
   --gap: 8px;
   position: relative;
   padding: calc(var(--hex-height) * 0.22) 0;
-  filter: drop-shadow(2px 8px 12px rgb(0 0 0 / 0.34));
+  filter: drop-shadow(2px 12px 18px rgb(82 53 27 / 0.38));
 }
 
 .row {
@@ -54,7 +52,7 @@
   flex: none;
   overflow: hidden;
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  background: #44483e;
+  background: #af9372;
 }
 
 .photo {
