@@ -43,13 +43,6 @@ export interface FAQItem {
   answer: string;
 }
 
-export interface PortraitSlide {
-  id: string;
-  person: "bride" | "groom";
-  image: string;
-  imagePosition: string;
-}
-
 export const wedding = {
   couple: { bride: "Khushboo", groom: "Parag" },
   dates: ["24", "25", "26"] as const,
@@ -69,14 +62,6 @@ export const wedding = {
       objectPosition: "50% 50%",
     },
   },
-  portraitSlides: [
-    { id: "khushboo-mint", person: "bride", image: "/images/portrait-mint.jpg", imagePosition: "50% 42%" },
-    { id: "parag-white", person: "groom", image: "/images/portrait-white-shirt.jpg", imagePosition: "57% 48%" },
-    { id: "khushboo-city", person: "bride", image: "/images/portrait-khushboo-city.jpg", imagePosition: "50% 42%" },
-    { id: "parag-blue", person: "groom", image: "/images/portrait-parag-blue.jpg", imagePosition: "50% 45%" },
-    { id: "khushboo-mountains", person: "bride", image: "/images/portrait-khushboo-mountains.jpg", imagePosition: "50% 50%" },
-    { id: "parag-boat", person: "groom", image: "/images/portrait-parag-boat.jpg", imagePosition: "50% 46%" },
-  ] satisfies PortraitSlide[],
   days: [
     { day: "24", label: "Arrival & Celebrations" },
     { day: "25", label: "The Wedding Day" },

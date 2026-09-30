@@ -23,7 +23,7 @@ export function Hero() {
           <p className="hero__tagline">{wedding.heroTagline}</p>
         </div>
       </div>
-      <a className="hero__scroll" href="#portraits" aria-label="Scroll to the portraits">
+      <a className="hero__scroll" href="#portraits" aria-label="Scroll to the photo gallery">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
           <path d="m5 9 7 7 7-7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
