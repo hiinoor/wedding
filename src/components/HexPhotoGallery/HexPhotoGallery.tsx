@@ -7,17 +7,17 @@ import styles from "./HexPhotoGallery.module.css";
 
 const rows = [
   [
-    { src: "/images/hex-gallery/khushboo-mint.jpg", alt: "Khushboo in a mint outfit among trees", position: "50% 43%" },
-    { src: "/images/hex-gallery/khushboo-mountains.jpg", alt: "Khushboo beside a mountain lake", position: "50% 50%" },
+    { src: "/images/hex-gallery/top-left.jpg", alt: "Khushboo standing by the sea at sunset", position: "50% 50%" },
+    { src: "/images/hex-gallery/top-right.jpg", alt: "Khushboo on a city street in a white dress", position: "50% 55%" },
   ],
   [
-    { src: "/images/hex-gallery/khushboo-city.jpg", alt: "Khushboo overlooking a city", position: "50% 50%" },
-    { src: "/images/hex-gallery/khushboo-sunset.jpg", alt: "Khushboo by the ocean at sunset", position: "50% 48%" },
-    { src: "/images/hex-gallery/parag-boat.jpg", alt: "Parag sitting on a boat by the sea", position: "50% 47%" },
+    { src: "/images/hex-gallery/middle-left.jpg", alt: "Parag sitting on a boat at Kilim Geoforest Park", position: "50% 45%" },
+    { src: "/images/hex-gallery/center.jpg", alt: "Parag on a wooden boat at sea", position: "50% 47%" },
+    { src: "/images/hex-gallery/middle-right.jpg", alt: "Parag smiling beneath string lights", position: "50% 45%" },
   ],
   [
-    { src: "/images/hex-gallery/khushboo-white.jpg", alt: "Khushboo in a white dress on a city street", position: "50% 65%" },
-    { src: "/images/hex-gallery/khushboo-ferris.jpg", alt: "Khushboo beside a waterfront Ferris wheel", position: "50% 65%" },
+    { src: "/images/hex-gallery/bottom-left.jpg", alt: "Khushboo holding red roses on a boat", position: "50% 50%" },
+    { src: "/images/hex-gallery/bottom-right.jpg", alt: "Khushboo in a mint outfit among trees", position: "50% 50%" },
   ],
 ] as const;
 
