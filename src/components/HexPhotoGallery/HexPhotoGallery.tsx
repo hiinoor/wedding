@@ -80,6 +80,7 @@ export function HexPhotoGallery() {
           <div className={styles.row} key={rowIndex}>
             {row.map((photo, columnIndex) => {
               const index = (rowIndex === 0 ? 0 : rowIndex === 1 ? 2 : 5) + columnIndex;
+              const displayBase = photo.src.replace(/-original\.(?:jpg|png)$/, "");
               const spotlit = reducedMotion || hoveredIndex === index ||
                 (inView && spotlightGroups[activeStep].some((cell) => cell === index));
 
@@ -94,15 +95,23 @@ export function HexPhotoGallery() {
                   onPointerEnter={(event) => { if (event.pointerType === "mouse") setHoveredIndex(index); }}
                   onPointerLeave={(event) => { if (event.pointerType === "mouse") setHoveredIndex((current) => current === index ? null : current); }}
                 >
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    unoptimized
-                    sizes="(max-width: 380px) 29vw, (max-width: 440px) 110px, (max-width: 1000px) 25vw, 250px"
-                    style={{ objectPosition: photo.position }}
-                    className={styles.photo}
-                  />
+                  <picture>
+                    {index !== 3 && (
+                      <>
+                        <source media="(max-width: 640px)" type="image/webp" srcSet={`${displayBase}-mobile.webp`} />
+                        <source type="image/webp" srcSet={`${displayBase}-display.webp`} />
+                      </>
+                    )}
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      unoptimized
+                      sizes="(max-width: 380px) 29vw, (max-width: 440px) 110px, (max-width: 1000px) 25vw, 250px"
+                      style={{ objectPosition: photo.position }}
+                      className={styles.photo}
+                    />
+                  </picture>
                 </motion.div>
               );
             })}
