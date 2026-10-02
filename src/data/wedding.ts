@@ -49,7 +49,7 @@ export const wedding = {
   month: "November",
   year: 2026,
   heroEyebrow: "OUR FOREVER BEGINS",
-  heroTagline: "Traditions. Celebrations. Togetherness.",
+  heroTagline: "Love. Celebrations. Togetherness.",
   photography: {
     scheduleMood: {
       src: "/images/schedule-lights-indigo.png",
@@ -69,7 +69,7 @@ export const wedding = {
   ] as const,
   scheduleTitle: "Three Days of Celebration",
   dressCodeTitle: "Dress for the Celebration",
-  dressCodeIntro: "All dress codes are just suggestions! :) No need to buy anything new, let us know if you have any questions!",
+  dressCodeIntro: "A polished start to the festivities. Indian or contemporary, choose something elegant that feels like you—dress up a little, overthink it very little.",
   stay: {
     checkIn: { day: "24" as WeddingDay, time: "11:00 AM" },
     checkOut: { day: "26" as WeddingDay, time: "9:00 AM" },
@@ -88,7 +88,7 @@ export const wedding = {
       day: "24",
       time: "12:00 PM – 2:00 PM",
       title: "Engagement & Welcome Party",
-      description: "An elegant beginning to the celebrations.",
+      description: "A polished beginning to a very festive couple of days.",
       dressCodeId: "engagement",
     },
     {
@@ -96,7 +96,7 @@ export const wedding = {
       day: "24",
       time: "4:00 PM – 6:00 PM",
       title: "Mehendi & Shrimanti Pujan",
-      description: "An afternoon of colour, tradition and celebration.",
+      description: "An afternoon of colour, tradition, and a little henna magic.",
       dressCodeId: "mehendi",
     },
     {
@@ -112,15 +112,15 @@ export const wedding = {
       day: "25",
       time: "10:00 AM – 12:00 PM",
       title: "Haldi",
-      description: "A bright morning filled with colour and celebration.",
+      description: "A bright morning of sunshine, colour, and cheerful chaos.",
       dressCodeId: "haldi",
     },
     {
       id: "wedding",
       day: "25",
       time: "5:30 PM onwards",
-      title: "Varmala & Pheras",
-      description: "An evening of traditions, rituals and celebration.",
+      title: "Mangalashtak, Varmala & Pheras",
+      description: "An evening of timeless traditions, and a promise for a lifetime.",
       dressCodeId: "wedding",
     },
     {

@@ -10,7 +10,6 @@ export function Schedule() {
         <div className="schedule__opening">
           <Reveal>
             <header className="schedule__heading">
-              <p className="eyebrow">The celebrations</p>
               <h2 id="schedule-title">{wedding.scheduleTitle}</h2>
             </header>
           </Reveal>

@@ -26,7 +26,7 @@
 .schedule__opening-photo::after { position: absolute; inset: 0.8rem; border: 1px solid rgb(247 241 232 / 0.64); content: ""; pointer-events: none; }
 
 .schedule__heading h2 {
-  margin: 1rem 0 0;
+  margin: 0;
   color: var(--wine);
   font-family: var(--font-editorial);
   font-size: clamp(4rem, 8.3vw, 8.5rem);
