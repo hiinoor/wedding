@@ -56,11 +56,6 @@ export const wedding = {
       alt: "Brass lanterns and oil lamps glowing against indigo wedding decorations",
       objectPosition: "50% 50%",
     },
-    dressIntro: {
-      src: "/images/dress-code-intro-outfits.png",
-      alt: "Blush embroidered dress and sage embroidered waistcoat displayed together in a heritage setting",
-      objectPosition: "50% 50%",
-    },
   },
   days: [
     { day: "24", label: "Arrival & Celebrations" },
@@ -227,11 +222,11 @@ export const wedding = {
     },
     {
       question: "How do I get from the airport or railway station to the hotel?",
-      answer: "We have arranged private transportation for all our guests during their stay in Nagpur TO and FROM the airport/railway station. Please provide Parag and Khushboo your itinerary (paragpise22@gmail.com) so that we can help confirm your transportation.",
+      answer: "We have arranged private transportation for all our guests to and from the airport or railway station during their stay in Nagpur. Please share your itinerary with Parag and Khushboo so we can confirm your transportation.",
     },
     {
       question: "Who should I contact if I need help during the wedding?",
-      answer: "Please text/call Parag (+91 7387672310), Khushboo (+91 9929532868) or Mohit (+91 9216201713) for ANY and ALL questions. We will do our best to help answer them!",
+      answer: "Please text or call Parag and Khushboo with any and all questions. We will do our best to help answer them!",
     },
     {
       question: "What will the weather feel like?",

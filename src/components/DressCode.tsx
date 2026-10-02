@@ -4,8 +4,6 @@ import { Reveal } from "@/components/Reveal";
 import { wedding } from "@/data/wedding";
 
 export function DressCode() {
-  const introPhoto = wedding.photography.dressIntro;
-
   return (
     <section id="dress-code" className="dress-code" aria-labelledby="dress-code-title">
       <div className="dress-code__intro">
@@ -15,11 +13,6 @@ export function DressCode() {
             <h2 id="dress-code-title">{wedding.dressCodeTitle}</h2>
             <p>{wedding.dressCodeIntro}</p>
             <OrnamentDivider />
-          </Reveal>
-          <Reveal className="dress-code__intro-visual" variant="image" direction="right" delay={0.1}>
-            <figure className="dress-code__intro-photo">
-              <Image src={introPhoto.src} alt={introPhoto.alt} fill sizes="(max-width: 767px) 100vw, 40vw" style={{ objectPosition: introPhoto.objectPosition }} />
-            </figure>
           </Reveal>
         </div>
       </div>

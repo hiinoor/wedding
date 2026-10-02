@@ -1,14 +1,10 @@
 .dress-code { background: var(--paper); }
 .dress-code__intro { overflow: hidden; background: var(--sand); }
-.dress-code__intro-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.82fr); align-items: center; gap: clamp(2rem, 6vw, 7rem); min-height: clamp(29rem, 38vw, 38rem); }
-.dress-code__intro-copy { padding-block: 4rem; }
-.dress-code__intro h2 { max-width: 45rem; margin: 0.8rem 0 0; color: var(--wine); font-family: var(--font-editorial); font-size: clamp(4.5rem, 8vw, 8.5rem); font-weight: 400; line-height: 0.84; letter-spacing: -0.05em; }
-.dress-code__intro p:not(.eyebrow) { max-width: 30rem; margin: 1.5rem 0 2rem; font-size: 0.92rem; line-height: 1.8; }
-.dress-code__intro .ornament-divider { width: 9rem; margin: 0; }
-.dress-code__intro-visual { align-self: stretch; min-width: 0; }
-.dress-code__intro-photo { position: relative; height: 100%; min-height: 27rem; margin: 0; overflow: hidden; }
-.dress-code__intro-photo img { object-fit: cover; filter: saturate(0.9); }
-.dress-code__intro-photo::after { position: absolute; inset: 0; background: linear-gradient(90deg, rgb(233 223 210 / 0.55), transparent 30%); content: ""; pointer-events: none; }
+.dress-code__intro-layout { display: flex; justify-content: center; }
+.dress-code__intro-copy { width: 100%; max-width: 48rem; padding-block: clamp(3.5rem, 7vw, 6rem); text-align: center; }
+.dress-code__intro h2 { margin: 0.8rem 0 0; color: var(--wine); font-family: var(--font-editorial); font-size: clamp(4.5rem, 8vw, 8.5rem); font-weight: 400; line-height: 0.84; letter-spacing: -0.05em; }
+.dress-code__intro p:not(.eyebrow) { max-width: 36rem; margin: 1.5rem auto 2rem; font-size: 0.92rem; line-height: 1.8; }
+.dress-code__intro .ornament-divider { width: 9rem; margin-inline: auto; }
 
 .dress-look { overflow: hidden; padding-block: clamp(3.5rem, 6vw, 6rem); border-top: 1px solid rgb(130 92 48 / 0.25); background: var(--paper); }
 .dress-look:nth-child(even) { background: var(--stone); }
@@ -37,13 +33,9 @@
   .dress-look h3 { font-size: clamp(3.8rem, 7vw, 5.5rem); }
 }
 @media (max-width: 767px) {
-  .dress-code__intro-layout { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
-  .dress-code__intro-copy { padding-block: 3rem 1.6rem; }
+  .dress-code__intro-copy { padding-block: 3rem; }
   .dress-code__intro h2 { font-size: clamp(3.5rem, 11.5vw, 5.2rem); }
-  .dress-code__intro p:not(.eyebrow) { margin: 1rem 0 1.25rem; font-size: 0.85rem; line-height: 1.65; }
-  .dress-code__intro-visual { width: 100%; }
-  .dress-code__intro-photo { width: 100%; min-height: 14.5rem; height: 65vw; max-height: 21rem; }
-  .dress-code__intro-photo::after { background: linear-gradient(180deg, rgb(233 223 210 / 0.25), transparent 26%); }
+  .dress-code__intro p:not(.eyebrow) { margin-block: 1rem 1.25rem; font-size: 0.85rem; line-height: 1.65; }
   .dress-look { padding-block: 2.1rem 2.5rem; }
   .dress-look__layout { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
   .dress-look__visual { width: min(78%, 20rem); align-self: flex-start; }

@@ -5,7 +5,10 @@ import { mapsDirectionsUrl, mapsSearchUrl } from "@/lib/maps";
 function MapAction({ href, children }: { href: string; children: React.ReactNode }) {
   return (
     <a className="travel__action" href={href} target="_blank" rel="noopener noreferrer">
-      {children} <span aria-hidden="true">↗</span>
+      {children}
+      <svg className="travel__action-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+        <path d="M4 16 16 4M6 4h10v10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
     </a>
   );
 }

@@ -32,8 +32,8 @@
 
 .travel__action { display: inline-flex; min-height: 44px; align-items: center; gap: 0.65rem; border-bottom: 1px solid var(--gold); color: var(--wine); font-size: 0.63rem; font-weight: 700; line-height: 1.5; letter-spacing: 0.14em; text-decoration: none; text-transform: uppercase; white-space: nowrap; transition: color 250ms ease, border-color 250ms ease; }
 .travel__action:hover { border-color: var(--wine); color: var(--espresso); }
-.travel__action span { font-size: 0.95rem; font-weight: 400; transition: transform 300ms ease; }
-.travel__action:hover span { transform: translate(3px, -3px); }
+.travel__action-icon { width: 1rem; height: 1rem; flex: none; transition: transform 300ms ease; }
+.travel__action:hover .travel__action-icon { transform: translate(3px, -3px); }
 .travel__route > .travel__action { align-self: center; }
 
 .travel__location { position: relative; display: grid; grid-template-columns: minmax(12rem, 0.33fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 6rem); align-items: center; overflow: hidden; padding: clamp(2.5rem, 5vw, 5rem); background: var(--sand); }
@@ -84,5 +84,5 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .travel__action, .travel__action span { transition: none; }
+  .travel__action, .travel__action-icon { transition: none; }
 }
