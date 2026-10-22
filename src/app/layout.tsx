@@ -15,7 +15,7 @@ import "@/styles/travel.css";
 import "@/styles/faq-footer.css";
 
 const siteUrl = "https://www.thekhushbooparagstory.life";
-const previewImage = "/images/khushboo-parag-invitation-preview.jpeg";
+const previewImage = "/images/khushboo-parag-share-v2.jpg";
 const invitationMessage = [
   "We’re getting married! ❤️",
   "We’d love for you to join us in Nagpur on 24–25 November 2026 as we celebrate this very special chapter of our lives with our favourite people. ✨",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Khushboo & Parag",
     title: "We’re getting married! ❤️",
     description: invitationMessage,
-    images: [{ url: previewImage, width: 1122, height: 1402, alt: "Illustrated portrait of Khushboo and Parag" }],
+    images: [{ url: previewImage, width: 1200, height: 630, type: "image/jpeg", alt: "Illustrated portrait of Khushboo and Parag" }],
   },
   twitter: {
     card: "summary_large_image",
