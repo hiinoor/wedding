@@ -52,8 +52,8 @@ export const wedding = {
   heroTagline: "Love. Celebrations. Togetherness.",
   photography: {
     scheduleMood: {
-      src: "/images/schedule-lights-indigo.png",
-      alt: "Brass lanterns and oil lamps glowing against indigo wedding decorations",
+      src: "/images/schedule-ganesha.png",
+      alt: "Lord Ganesha surrounded by flowers and glowing diyas at sunset",
       objectPosition: "50% 50%",
     },
   },

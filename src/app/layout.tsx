@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { weddingDateRange } from "@/data/wedding";
 import "@fontsource/cormorant-garamond/400.css";
 import "@fontsource/cormorant-garamond/500.css";
 import "@fontsource/cormorant-garamond/600.css";
@@ -15,20 +14,35 @@ import "@/styles/dress-code.css";
 import "@/styles/travel.css";
 import "@/styles/faq-footer.css";
 
+const siteUrl = "https://www.thekhushbooparagstory.life";
+const previewImage = "/images/khushboo-parag-invitation-preview.jpeg";
+const invitationMessage = [
+  "We’re getting married! ❤️",
+  "We’d love for you to join us in Nagpur on 24–25 November 2026 as we celebrate this very special chapter of our lives with our favourite people. ✨",
+  "From the festivities to the wedding, we’re looking forward to a couple of days filled with love, laughter, music and lots of memories together. 🥂💃🏻",
+  "📍 La Vista Resort Lakeside, Nagpur",
+  "Everything you need to know about the celebrations, stay, travel & more is here:\nhttps://www.thekhushbooparagstory.life/",
+  "Can’t wait to celebrate with you! ❤️",
+].join("\n\n");
+
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ??
-      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000"),
-  ),
+  metadataBase: new URL(siteUrl),
   title: "Khushboo & Parag | Wedding Celebration",
-  description:
-    "Join Khushboo & Parag for three days of wedding celebrations, traditions and togetherness.",
+  description: invitationMessage,
   openGraph: {
     type: "website",
-    title: "Khushboo & Parag",
-    description: `${weddingDateRange} · La Vista Resort Lakeside, Nagpur`,
+    url: siteUrl,
+    siteName: "Khushboo & Parag",
+    title: "We’re getting married! ❤️",
+    description: invitationMessage,
+    images: [{ url: previewImage, width: 1122, height: 1402, alt: "Illustrated portrait of Khushboo and Parag" }],
   },
-  twitter: { card: "summary_large_image" },
+  twitter: {
+    card: "summary_large_image",
+    title: "We’re getting married! ❤️",
+    description: invitationMessage,
+    images: [previewImage],
+  },
 };
 
 export const viewport: Viewport = {
