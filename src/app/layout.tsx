@@ -16,31 +16,24 @@ import "@/styles/faq-footer.css";
 
 const siteUrl = "https://www.thekhushbooparagstory.life";
 const previewImage = "/images/khushboo-parag-share-v2.jpg";
-const invitationMessage = [
-  "We’re getting married! ❤️",
-  "We’d love for you to join us in Nagpur on 24–25 November 2026 as we celebrate this very special chapter of our lives with our favourite people. ✨",
-  "From the festivities to the wedding, we’re looking forward to a couple of days filled with love, laughter, music and lots of memories together. 🥂💃🏻",
-  "📍 La Vista Resort Lakeside, Nagpur",
-  "Everything you need to know about the celebrations, stay, travel & more is here:\nhttps://www.thekhushbooparagstory.life/",
-  "Can’t wait to celebrate with you! ❤️",
-].join("\n\n");
+const shareDescription = "24–25 November 2026 · La Vista Resort Lakeside, Nagpur";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Khushboo & Parag | Wedding Celebration",
-  description: invitationMessage,
+  description: shareDescription,
   openGraph: {
     type: "website",
     url: siteUrl,
     siteName: "Khushboo & Parag",
-    title: "We’re getting married! ❤️",
-    description: invitationMessage,
+    title: "Khushboo & Parag",
+    description: shareDescription,
     images: [{ url: previewImage, width: 1200, height: 630, type: "image/jpeg", alt: "Illustrated portrait of Khushboo and Parag" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "We’re getting married! ❤️",
-    description: invitationMessage,
+    title: "Khushboo & Parag",
+    description: shareDescription,
     images: [previewImage],
   },
 };
